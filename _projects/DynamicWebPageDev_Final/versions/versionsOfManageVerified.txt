@@ -1,0 +1,90 @@
+<%@ Page Title="" Language="C#" MasterPageFile="~/SitePage.Master" AutoEventWireup="true" CodeBehind="ManageVerified.aspx.cs" Inherits="PetAPup.ManageVerified" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="CPHmiddleContent" runat="server">
+    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:PetAPupDB %>" 
+        SelectCommand="SELECT [username], [createDate], [resolvedTicket], [modifiedDate], [ticketDescription], [modifiedBy] FROM [tblUsers]"
+        UpdateCommand="UPDATE tblUsers SET resolvedTicket = @ResolvedTicket, modifiedDate = @modifiedDate, ticketDescription = @ticketDescription, modifiedBy = @modifiedBy WHERE username = @username"
+        InsertCommand="INSERT INTO tblUsers([UserName], [CreateDate],  [resolvedTicket], [modifiedDate], [ticketDescription], [modifiedBy]) 
+        VALUES(@UserName, @CreateDate, @resolvedTicket, @modifiedDate, @ticketDescription, @modifiedBy) "></asp:SqlDataSource>
+        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" BackColor="#CCCCCC" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" CellPadding="4" CellSpacing="2" DataSourceID="SqlDataSource1" ForeColor="Black">
+            <Columns>
+                <asp:BoundField DataField="username" HeaderText="username" SortExpression="username" />
+                <asp:BoundField DataField="createDate" HeaderText="createDate" SortExpression="createDate" />
+                <asp:CheckBoxField DataField="resolvedTicket" HeaderText="resolvedTicket" SortExpression="resolvedTicket" />
+                <asp:BoundField DataField="modifiedDate" HeaderText="modifiedDate" SortExpression="modifiedDate" />
+                <asp:BoundField DataField="ticketDescription" HeaderText="ticketDescription" SortExpression="ticketDescription" />
+                <asp:BoundField DataField="modifiedBy" HeaderText="modifiedBy" SortExpression="modifiedBy" />
+                <asp:CommandField ShowEditButton="True" />
+                <asp:CommandField EditText="New" ShowInsertButton="True" />
+            </Columns>
+            <FooterStyle BackColor="#CCCCCC" />
+            <HeaderStyle BackColor="Black" Font-Bold="True" ForeColor="White" />
+            <PagerStyle BackColor="#CCCCCC" ForeColor="Black" HorizontalAlign="Left" />
+            <RowStyle BackColor="White" />
+            <SelectedRowStyle BackColor="#000099" Font-Bold="True" ForeColor="White" />
+            <SortedAscendingCellStyle BackColor="#F1F1F1" />
+            <SortedAscendingHeaderStyle BackColor="#808080" />
+            <SortedDescendingCellStyle BackColor="#CAC9C9" />
+            <SortedDescendingHeaderStyle BackColor="#383838" />
+        </asp:GridView>
+
+
+</asp:Content>
+
+
+
+
+
+
+NEW PAGE with auto generated format (primary key username)
+
+<%@ Page Title="" Language="C#" MasterPageFile="~/SitePage.Master" AutoEventWireup="true" CodeBehind="ManageVerified.aspx.cs" Inherits="PetAPup.ManageVerified" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="CPHmiddleContent" runat="server">
+    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:PetAPupDB %>" 
+        SelectCommand="SELECT [username], [createDate], [resolvedTicket], [modifiedDate], [ticketDescription], [modifiedBy] FROM [tblUsers]"
+        UpdateCommand="UPDATE tblUsers SET resolvedTicket = @ResolvedTicket, modifiedDate = @modifiedDate, ticketDescription = @ticketDescription, modifiedBy = @modifiedBy WHERE username = @username"
+        InsertCommand="INSERT INTO [tblUsers] ([username], [createDate], [resolvedTicket], [modifiedDate], [ticketDescription], [modifiedBy]) VALUES (@username, @createDate, @resolvedTicket, @modifiedDate, @ticketDescription, @modifiedBy)" ConflictDetection="CompareAllValues" DeleteCommand="DELETE FROM [tblUsers] WHERE [username] = @original_username AND (([createDate] = @original_createDate) OR ([createDate] IS NULL AND @original_createDate IS NULL)) AND (([resolvedTicket] = @original_resolvedTicket) OR ([resolvedTicket] IS NULL AND @original_resolvedTicket IS NULL)) AND (([modifiedDate] = @original_modifiedDate) OR ([modifiedDate] IS NULL AND @original_modifiedDate IS NULL)) AND (([ticketDescription] = @original_ticketDescription) OR ([ticketDescription] IS NULL AND @original_ticketDescription IS NULL)) AND (([modifiedBy] = @original_modifiedBy) OR ([modifiedBy] IS NULL AND @original_modifiedBy IS NULL))" OldValuesParameterFormatString="original_{0}">
+        <DeleteParameters>
+            <asp:Parameter Name="original_username" Type="String" />
+            <asp:Parameter Name="original_createDate" Type="String" />
+            <asp:Parameter Name="original_resolvedTicket" Type="Boolean" />
+            <asp:Parameter Name="original_modifiedDate" Type="String" />
+            <asp:Parameter Name="original_ticketDescription" Type="String" />
+            <asp:Parameter Name="original_modifiedBy" Type="String" />
+        </DeleteParameters>
+        <InsertParameters>
+            <asp:Parameter Name="username" Type="String" />
+            <asp:Parameter Name="createDate" Type="String" />
+            <asp:Parameter Name="resolvedTicket" Type="Boolean" />
+            <asp:Parameter Name="modifiedDate" Type="String" />
+            <asp:Parameter Name="ticketDescription" Type="String" />
+            <asp:Parameter Name="modifiedBy" Type="String" />
+        </InsertParameters>
+
+    </asp:SqlDataSource>
+        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" BackColor="#CCCCCC" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" CellPadding="4" CellSpacing="2" DataSourceID="SqlDataSource1" ForeColor="Black" DataKeyNames="username">
+            <Columns>
+                <asp:BoundField DataField="username" HeaderText="username" SortExpression="username" ReadOnly="True" />
+                <asp:BoundField DataField="createDate" HeaderText="createDate" SortExpression="createDate" />
+                <asp:CheckBoxField DataField="resolvedTicket" HeaderText="resolvedTicket" SortExpression="resolvedTicket" />
+                <asp:BoundField DataField="modifiedDate" HeaderText="modifiedDate" SortExpression="modifiedDate" />
+                <asp:BoundField DataField="ticketDescription" HeaderText="ticketDescription" SortExpression="ticketDescription" />
+                <asp:BoundField DataField="modifiedBy" HeaderText="modifiedBy" SortExpression="modifiedBy" />
+                <asp:CommandField ShowEditButton="True" />
+            </Columns>
+            <FooterStyle BackColor="#CCCCCC" />
+            <HeaderStyle BackColor="Black" Font-Bold="True" ForeColor="White" />
+            <PagerStyle BackColor="#CCCCCC" ForeColor="Black" HorizontalAlign="Left" />
+            <RowStyle BackColor="White" />
+            <SelectedRowStyle BackColor="#000099" Font-Bold="True" ForeColor="White" />
+            <SortedAscendingCellStyle BackColor="#F1F1F1" />
+            <SortedAscendingHeaderStyle BackColor="#808080" />
+            <SortedDescendingCellStyle BackColor="#CAC9C9" />
+            <SortedDescendingHeaderStyle BackColor="#383838" />
+        </asp:GridView>
+
+
+</asp:Content>

@@ -1,0 +1,40 @@
+﻿body {
+    /*background: http://onlineresize.club/apple-club.html*/
+    background-image:url(../Images/blueWallpaper.jpg);
+
+    background-color: #3B8BEB;
+    
+}
+.auto-style1 {
+    width: 900px;
+}
+.auto-style2 {
+    width: 100%;
+}
+.center {
+    text-align:center;
+}
+
+.PageHeadingsBtns:hover {
+    background-color: black;
+}
+.PageHeadings {
+    font-size: 150%;
+    width: 25%;
+}
+
+.Error{
+    color: red;
+}
+
+.Red{
+    background-color:red;
+}
+
+.Yellow{
+    background-color:yellow;
+}
+
+.Blank{
+    background-color:white;
+}

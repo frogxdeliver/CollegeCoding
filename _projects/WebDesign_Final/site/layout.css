@@ -1,0 +1,50 @@
+body {
+	background-image: url("images/dark-textured-background9.jpg");
+}
+.header {
+	margin:auto;
+	background-color: rgba(0, 0, 0, 0.78);
+	color: white;
+	padding-top:20px;
+	padding-bottom:20px;
+}
+.mainC {
+	position: absolute;
+	margin-right: 10px;
+	margin-left: 400px;
+	margin-top: 150px;
+	background-color: rgba(0, 0, 0, 0.78);
+	color: white;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-bottom: 20px;
+	
+}
+.navbar {
+	position: absolute;
+	margin-left: 0px;
+	margin-top: 150px;
+	background-color: rgba(0, 0, 0, 0.78);
+	color: white;
+	padding-right: 50px;
+}
+ul li:hover {
+	background: #a6a6a6;
+}
+div ul li a{
+	text-decoration: none;
+	color: white;
+}
+div ul {
+	list-style-type: none;
+}
+.footer {
+	position: static;
+	margin: auto;
+	background-color: rgba(0, 0, 0, 0.78);
+	color: white;
+	padding-bottom: 20px;
+	margin-bottom: 0px;
+	margin-top: 800px;
+	padding-top: 20px;
+}

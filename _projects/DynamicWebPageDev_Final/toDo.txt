@@ -1,0 +1,9 @@
+get the panel from the managePage.aspx to visible="true" WHEN a user is logged in
+
+
+
+1) access & store statements
+
+2)  stored procedure that creates everything except username and password when a user logs in for the first time
+
+*************************3) 25 tickets total****************************

@@ -1,0 +1,15 @@
+13
+bannanna 2.49 B017JWOYEE fruit 12-7-17 120 5
+apples 1.45 11046 fruit 11-30-17 125 3
+strawberries 3.09 11234 fruit 12-10-17 107 20
+clementine 6.49 33456 fruit 12-20-17 60 30
+baby-carrots 1.39 33567 vegigable 12-20-17 10 26
+water 5.49 33678 beverage 3-20-18 0 36
+crandberry-juice 2.50 33456 beverage 3-20-18 160 1
+orange-juice 4.79 44789 beverage 3-20-18 120 1
+whole-milk 3.59 336785 beverage 12-12-17 200 1
+lemonade 2.90 338956 beverage 3-20-18 120 1
+coke 5.49 33789 beverage 4-4-18 150 12
+diet-coke 5.49 66987 beverage 4-4-18 0 12
+halo-top-vanilla 4.99 55789 ice-cream 1-1-18 320 1
+halo-top-cake 4.99 33456 ice-cream 1-1-18 360 1

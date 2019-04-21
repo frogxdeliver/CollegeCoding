@@ -1,0 +1,3 @@
+I handled the design with Indya Dodson one of my group partners, and another member handled the JavaScript:
+
+notetaker.dx.am

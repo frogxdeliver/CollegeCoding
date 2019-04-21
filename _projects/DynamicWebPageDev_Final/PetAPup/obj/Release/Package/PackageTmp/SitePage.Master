@@ -1,0 +1,55 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="SitePage.master.cs" Inherits="PetAPup.SitePage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>Pet A Pup Support</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link rel="stylesheet" href="Styles/styles.css" />
+</head>
+<body>
+    <!-- with help from video tutorial: https://www.youtube.com/watch?v=TDaZzKbUvyc -->
+    <form id="form1" runat="server">
+        <div>
+            <table align="center" class="auto-style1">
+                <tr>
+                    <td>
+                        <!--found puppy pixel image on google here: https://www.google.com/search?q=puppy+pixel+art&rlz=1C1CHBF_enUS812US812&tbm=isch&source=iu&ictx=1&fir=pDhCOwox6hUHJM%253A%252CC5zNE8y4BC4PGM%252C_&usg=AI4_-kTnVjdn7INfTyTGbbejR6T1B5VDcA&sa=X&ved=2ahUKEwjymZj93JDeAhXlhOAKHXOlAwcQ9QEwAXoECAAQBg#imgrc=Bu7QLaFPelsM1M:-->
+                        <asp:Image ID="ImgLogo" runat="server" AlternateText="Pet a puppy logo of a small pixelated dog" ImageUrl="~/Images/PetAPup.PNG" />
+                        <table align="center" class="auto-style3">
+                            <tr>
+                                <td class="PageHeadingsBtns">
+                                    <asp:Button ID="BtnLogin" runat="server" Text="Login" PostBackUrl="~/index.aspx" /></td>
+                                <td class="PageHeadingsBtns"><asp:Button ID="BtnTickets" runat="server" Text="Tickets" PostBackUrl="~/ticketsPage.aspx" /></td>
+                                <td class="PageHeadingsBtns"><asp:Button ID="BtnManage" runat="server" Text="Manage" PostBackUrl="~/managePage.aspx" OnClick="BtnManage_Click"/></td>
+                                <td class="PageHeadingsBtns"><asp:Button ID="BtnReports" runat="server" Text="Reports" PostBackUrl="~/reportsPage.aspx" /></td>
+                                <td class="PageHeadingsBtns"><asp:Button ID="SiteMap" runat="server" Text="Site Map" PostBackUrl="~/siteMap.aspx" /></td>
+                                <td class="PageHeadings"></td>
+                                <td class="PageHeadings"></td>
+                                <td class="PageHeadings"></td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <asp:ContentPlaceHolder ID="CPHmiddleContent" runat="server">
+                            
+                        </asp:ContentPlaceHolder>
+                    </td>
+                </tr>
+                <tr>
+                    <td>For testing purpose<br />
+                        <br />
+                        Username 1: Bob<br />
+                        Password: test123<br />
+                        <br />
+                        (since this is a project)</td>
+                </tr>
+            </table>
+        </div>
+    </form>
+</body>
+</html>
